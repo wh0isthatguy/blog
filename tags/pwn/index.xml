@@ -1,1 +1,290 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pwn on wh0isthatguy</title><link>https://pwnn.me/tags/pwn/</link><description>Recent content in Pwn on wh0isthatguy</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ryan@pwnn.me (wh0isthatguy)</managingEditor><webMaster>ryan@pwnn.me (wh0isthatguy)</webMaster><copyright>flag{my_c0pyr1ght}</copyright><lastBuildDate>Mon, 29 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://pwnn.me/tags/pwn/index.xml" rel="self" type="application/rss+xml"/><item><title>ret2dl_resolve note</title><link>https://pwnn.me/blog/ret2dlresolve/</link><pubDate>Mon, 29 Jan 2024 00:00:00 +0000</pubDate><author>ryan@pwnn.me (wh0isthatguy)</author><guid>https://pwnn.me/blog/ret2dlresolve/</guid><description/></item><item><title>Stack-based exploits in Linux kernel</title><link>https://pwnn.me/blog/linuxkernelstack/</link><pubDate>Mon, 29 Jan 2024 00:00:00 +0000</pubDate><author>ryan@pwnn.me (wh0isthatguy)</author><guid>https://pwnn.me/blog/linuxkernelstack/</guid><description/></item><item><title>FSOP stdout</title><link>https://pwnn.me/blog/fsop/</link><pubDate>Fri, 13 Oct 2023 00:00:00 +0000</pubDate><author>ryan@pwnn.me (wh0isthatguy)</author><guid>https://pwnn.me/blog/fsop/</guid><description/></item><item><title>ret2csu - alternative way to bypass ASLR</title><link>https://pwnn.me/blog/ret2csu/</link><pubDate>Tue, 22 Aug 2023 00:00:00 +0000</pubDate><author>ryan@pwnn.me (wh0isthatguy)</author><guid>https://pwnn.me/blog/ret2csu/</guid><description/></item><item><title>TOCTOU attack</title><link>https://pwnn.me/blog/toctou/</link><pubDate>Tue, 04 Jul 2023 00:00:00 +0000</pubDate><author>ryan@pwnn.me (wh0isthatguy)</author><guid>https://pwnn.me/blog/toctou/</guid><description/></item><item><title>rand() vulnerability</title><link>https://pwnn.me/blog/randvuln/</link><pubDate>Fri, 12 May 2023 00:00:00 +0000</pubDate><author>ryan@pwnn.me (wh0isthatguy)</author><guid>https://pwnn.me/blog/randvuln/</guid><description/></item><item><title>Bruteforce Stack Canary x86-64 Linux</title><link>https://pwnn.me/blog/brutecanary/</link><pubDate>Fri, 28 Apr 2023 00:00:00 +0000</pubDate><author>ryan@pwnn.me (wh0isthatguy)</author><guid>https://pwnn.me/blog/brutecanary/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pwn on wh0isthatguy</title><link>https://pwnn.me/tags/pwn/</link><description>Recent content in Pwn on wh0isthatguy</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ryan@pwnn.me (wh0isthatguy)</managingEditor><webMaster>ryan@pwnn.me (wh0isthatguy)</webMaster><copyright>flag{my_c0pyr1ght}</copyright><lastBuildDate>Mon, 29 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://pwnn.me/tags/pwn/index.xml" rel="self" type="application/rss+xml"/><item><title>ret2dl_resolve note</title><link>https://pwnn.me/blog/ret2dlresolve/</link><pubDate>Mon, 29 Jan 2024 00:00:00 +0000</pubDate><author>ryan@pwnn.me (wh0isthatguy)</author><guid>https://pwnn.me/blog/ret2dlresolve/</guid><description>&lt;div
+ 
+ class="flex px-4 py-3 rounded-md shadow bg-primary-100 dark:bg-primary-900"
+ 
+ &gt;
+ &lt;span
+ 
+ class="text-primary-400 pe-3 flex items-center"
+ 
+ &gt;
+ &lt;span class="relative block icon"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"&gt;&lt;path fill="currentColor" d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/&gt;&lt;/svg&gt;
+&lt;/span&gt;
+ &lt;/span&gt;
+
+ &lt;span
+ 
+ class="dark:text-neutral-300"
+ 
+ &gt;&lt;strong&gt;Images not loading?&lt;/strong&gt; Try accessing this site using a VPN.&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Trong một số trường hợp khi ta overflow mà không có các hàm trong PLT thích hợp để leak libc ra thì ret2dl_resolve là một kỹ thuật để lấy được shell. Trong bài này mình sẽ giới thiệu tóm tắt về cách ret2dl_resolve ở glibc 2.37 hoạt động qua một bài demo.&lt;/p&gt;</description></item><item><title>Stack-based exploits in Linux kernel</title><link>https://pwnn.me/blog/linuxkernelstack/</link><pubDate>Mon, 29 Jan 2024 00:00:00 +0000</pubDate><author>ryan@pwnn.me (wh0isthatguy)</author><guid>https://pwnn.me/blog/linuxkernelstack/</guid><description>&lt;div
+ 
+ class="flex px-4 py-3 rounded-md shadow bg-primary-100 dark:bg-primary-900"
+ 
+ &gt;
+ &lt;span
+ 
+ class="text-primary-400 pe-3 flex items-center"
+ 
+ &gt;
+ &lt;span class="relative block icon"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"&gt;&lt;path fill="currentColor" d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/&gt;&lt;/svg&gt;
+&lt;/span&gt;
+ &lt;/span&gt;
+
+ &lt;span
+ 
+ class="dark:text-neutral-300"
+ 
+ &gt;&lt;strong&gt;Images not loading?&lt;/strong&gt; Try accessing this site using a VPN.&lt;/span&gt;
+&lt;/div&gt;
+
+
+&lt;h2 class="relative group"&gt;Mitigations
+ &lt;div id="mitigations" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#mitigations" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+
+&lt;h3 class="relative group"&gt;1. SMEP
+ &lt;div id="1-smep" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1-smep" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;dont allow to execute user space code&lt;/li&gt;
+&lt;li&gt;in qemu, to enable SMEP we use &lt;code&gt;-cpu+smep&lt;/code&gt; to disasble it use &lt;code&gt;-append nosmep&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;SMEP is a hardware security mechanism. Setting the 21st bit of the CR4 register enables SMEP.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 class="relative group"&gt;2. SMAP
+ &lt;div id="2-smap" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#2-smap" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;kernel space cannot read or write userspace memory&lt;/li&gt;
+&lt;li&gt;to do that we need to use copy_from_user / copy_to_user&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 class="relative group"&gt;3. Kernel Canary
+ &lt;div id="3-kernel-canary" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#3-kernel-canary" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;the same as stack canary on user land&lt;/li&gt;
+&lt;li&gt;enabled in the kernel at compile time and cannot be disabled.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 class="relative group"&gt;4. KASLR
+ &lt;div id="4-kaslr" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#4-kaslr" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;randomizes the base address where the kernel is loaded each time the system is booted&lt;/li&gt;
+&lt;li&gt;It can be enabled/disabled by adding &lt;code&gt;kaslr&lt;/code&gt; or &lt;code&gt;nokaslr&lt;/code&gt; under &lt;code&gt;-append&lt;/code&gt; option.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 class="relative group"&gt;5. KPTI (Kernel Page-Table Isolation)
+ &lt;div id="5-kpti-kernel-page-table-isolation" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#5-kpti-kernel-page-table-isolation" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;prevent Meltdown (side-channel attack)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 class="relative group"&gt;6. KADR (Kernel Address Display Restriction)
+ &lt;div id="6-kadr-kernel-address-display-restriction" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#6-kadr-kernel-address-display-restriction" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;hide kernel address /proc/kallsyms&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/proc/sys/kernel/kptr_restrict&lt;/code&gt; : 0 to disable it&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Kernel have sus function : &lt;code&gt;run_cmd(char * cmd)&lt;/code&gt; : run cmd in userspace as root.&lt;/p&gt;</description></item><item><title>FSOP stdout</title><link>https://pwnn.me/blog/fsop/</link><pubDate>Fri, 13 Oct 2023 00:00:00 +0000</pubDate><author>ryan@pwnn.me (wh0isthatguy)</author><guid>https://pwnn.me/blog/fsop/</guid><description>&lt;div
+ 
+ class="flex px-4 py-3 rounded-md shadow bg-primary-100 dark:bg-primary-900"
+ 
+ &gt;
+ &lt;span
+ 
+ class="text-primary-400 pe-3 flex items-center"
+ 
+ &gt;
+ &lt;span class="relative block icon"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"&gt;&lt;path fill="currentColor" d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/&gt;&lt;/svg&gt;
+&lt;/span&gt;
+ &lt;/span&gt;
+
+ &lt;span
+ 
+ class="dark:text-neutral-300"
+ 
+ &gt;&lt;strong&gt;Images not loading?&lt;/strong&gt; Try accessing this site using a VPN.&lt;/span&gt;
+&lt;/div&gt;
+
+
+&lt;h2 class="relative group"&gt;Analysis
+ &lt;div id="analysis" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#analysis" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+
+&lt;h3 class="relative group"&gt;1. fclose
+ &lt;div id="1-fclose" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1-fclose" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;figure&gt;&lt;img
+ class="my-0 rounded-md"
+ loading="lazy"
+ decoding="async"
+ fetchpriority="low"
+ alt=""
+ src="https://hackmd.io/_uploads/ry9OZ6LWp.png"
+ &gt;&lt;/figure&gt;
+&lt;p&gt;&lt;code&gt;fclose()&lt;/code&gt; → &lt;code&gt;__IO_new_fclose&lt;/code&gt;&lt;/p&gt;</description></item><item><title>ret2csu - alternative way to bypass ASLR</title><link>https://pwnn.me/blog/ret2csu/</link><pubDate>Tue, 22 Aug 2023 00:00:00 +0000</pubDate><author>ryan@pwnn.me (wh0isthatguy)</author><guid>https://pwnn.me/blog/ret2csu/</guid><description>&lt;div
+ 
+ class="flex px-4 py-3 rounded-md shadow bg-primary-100 dark:bg-primary-900"
+ 
+ &gt;
+ &lt;span
+ 
+ class="text-primary-400 pe-3 flex items-center"
+ 
+ &gt;
+ &lt;span class="relative block icon"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"&gt;&lt;path fill="currentColor" d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/&gt;&lt;/svg&gt;
+&lt;/span&gt;
+ &lt;/span&gt;
+
+ &lt;span
+ 
+ class="dark:text-neutral-300"
+ 
+ &gt;&lt;strong&gt;Images not loading?&lt;/strong&gt; Try accessing this site using a VPN.&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;p&gt;ret2csu là kỹ thuật được sử dụng khi ta không có đầy đủ gadget cần thiết để thực hiện rop chain. Đây chính là gadget luôn có khi compile dynamic một binary. Bài này mình sẽ giới thiệu về kỹ thuật này thông qua một challenge.&lt;/p&gt;</description></item><item><title>TOCTOU attack</title><link>https://pwnn.me/blog/toctou/</link><pubDate>Tue, 04 Jul 2023 00:00:00 +0000</pubDate><author>ryan@pwnn.me (wh0isthatguy)</author><guid>https://pwnn.me/blog/toctou/</guid><description>&lt;div
+ 
+ class="flex px-4 py-3 rounded-md shadow bg-primary-100 dark:bg-primary-900"
+ 
+ &gt;
+ &lt;span
+ 
+ class="text-primary-400 pe-3 flex items-center"
+ 
+ &gt;
+ &lt;span class="relative block icon"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"&gt;&lt;path fill="currentColor" d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/&gt;&lt;/svg&gt;
+&lt;/span&gt;
+ &lt;/span&gt;
+
+ &lt;span
+ 
+ class="dark:text-neutral-300"
+ 
+ &gt;&lt;strong&gt;Images not loading?&lt;/strong&gt; Try accessing this site using a VPN.&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Trong bài này mình sẽ giới thiệu qua về TOCTOU (time of check - time of use), một hướng khai thác trong race condition cũng như cách setup đơn giản để khai thác và giải một số bài minh hoạ.&lt;/p&gt;</description></item><item><title>rand() vulnerability</title><link>https://pwnn.me/blog/randvuln/</link><pubDate>Fri, 12 May 2023 00:00:00 +0000</pubDate><author>ryan@pwnn.me (wh0isthatguy)</author><guid>https://pwnn.me/blog/randvuln/</guid><description>&lt;div
+ 
+ class="flex px-4 py-3 rounded-md shadow bg-primary-100 dark:bg-primary-900"
+ 
+ &gt;
+ &lt;span
+ 
+ class="text-primary-400 pe-3 flex items-center"
+ 
+ &gt;
+ &lt;span class="relative block icon"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"&gt;&lt;path fill="currentColor" d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/&gt;&lt;/svg&gt;
+&lt;/span&gt;
+ &lt;/span&gt;
+
+ &lt;span
+ 
+ class="dark:text-neutral-300"
+ 
+ &gt;&lt;strong&gt;Images not loading?&lt;/strong&gt; Try accessing this site using a VPN.&lt;/span&gt;
+&lt;/div&gt;
+
+
+&lt;h2 class="relative group"&gt;Vấn đề
+ &lt;div id="vấn-đề" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#v%e1%ba%a5n-%c4%91%e1%bb%81" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;Giả sử ta có đoạn code sau đây được compile bằng &lt;code&gt;gcc -o rand rand.c&lt;/code&gt;&lt;/p&gt;</description></item><item><title>Bruteforce Stack Canary x86-64 Linux</title><link>https://pwnn.me/blog/brutecanary/</link><pubDate>Fri, 28 Apr 2023 00:00:00 +0000</pubDate><author>ryan@pwnn.me (wh0isthatguy)</author><guid>https://pwnn.me/blog/brutecanary/</guid><description>&lt;div
+ 
+ class="flex px-4 py-3 rounded-md shadow bg-primary-100 dark:bg-primary-900"
+ 
+ &gt;
+ &lt;span
+ 
+ class="text-primary-400 pe-3 flex items-center"
+ 
+ &gt;
+ &lt;span class="relative block icon"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"&gt;&lt;path fill="currentColor" d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/&gt;&lt;/svg&gt;
+&lt;/span&gt;
+ &lt;/span&gt;
+
+ &lt;span
+ 
+ class="dark:text-neutral-300"
+ 
+ &gt;&lt;strong&gt;Images not loading?&lt;/strong&gt; Try accessing this site using a VPN.&lt;/span&gt;
+&lt;/div&gt;
+
+
+&lt;h2 class="relative group"&gt;I. Giới thiệu
+ &lt;div id="i-giới-thiệu" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#i-gi%e1%bb%9bi-thi%e1%bb%87u" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;Như ở bài &lt;a href="https://hackmd.io/OgqVhSZZR3CCszA9GwcrTA" target="_blank" rel="noreferrer"&gt;trước&lt;/a&gt; ta đã biết được stack canary là một cơ chế để ngăn chặn buffer overflow. Đây là một giá trị để trước return address và được check trước khi return 1 stack frame nhằm tránh overflow. Do đó để chuyển hướng hoạt động của chương trình, ta cần tấn công bằng 1 trong 2 cách sau: leak hoặc bruteforce stack canary. Trong bài này sẽ tấn công bằng cách thứ 2.&lt;/p&gt;</description></item></channel></rss>

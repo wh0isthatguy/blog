@@ -1,1 +1,22 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Toctou on wh0isthatguy</title><link>https://pwnn.me/tags/toctou/</link><description>Recent content in Toctou on wh0isthatguy</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ryan@pwnn.me (wh0isthatguy)</managingEditor><webMaster>ryan@pwnn.me (wh0isthatguy)</webMaster><copyright>flag{my_c0pyr1ght}</copyright><lastBuildDate>Tue, 04 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://pwnn.me/tags/toctou/index.xml" rel="self" type="application/rss+xml"/><item><title>TOCTOU attack</title><link>https://pwnn.me/blog/toctou/</link><pubDate>Tue, 04 Jul 2023 00:00:00 +0000</pubDate><author>ryan@pwnn.me (wh0isthatguy)</author><guid>https://pwnn.me/blog/toctou/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Toctou on wh0isthatguy</title><link>https://pwnn.me/tags/toctou/</link><description>Recent content in Toctou on wh0isthatguy</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ryan@pwnn.me (wh0isthatguy)</managingEditor><webMaster>ryan@pwnn.me (wh0isthatguy)</webMaster><copyright>flag{my_c0pyr1ght}</copyright><lastBuildDate>Tue, 04 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://pwnn.me/tags/toctou/index.xml" rel="self" type="application/rss+xml"/><item><title>TOCTOU attack</title><link>https://pwnn.me/blog/toctou/</link><pubDate>Tue, 04 Jul 2023 00:00:00 +0000</pubDate><author>ryan@pwnn.me (wh0isthatguy)</author><guid>https://pwnn.me/blog/toctou/</guid><description>&lt;div
+ 
+ class="flex px-4 py-3 rounded-md shadow bg-primary-100 dark:bg-primary-900"
+ 
+ &gt;
+ &lt;span
+ 
+ class="text-primary-400 pe-3 flex items-center"
+ 
+ &gt;
+ &lt;span class="relative block icon"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"&gt;&lt;path fill="currentColor" d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/&gt;&lt;/svg&gt;
+&lt;/span&gt;
+ &lt;/span&gt;
+
+ &lt;span
+ 
+ class="dark:text-neutral-300"
+ 
+ &gt;&lt;strong&gt;Images not loading?&lt;/strong&gt; Try accessing this site using a VPN.&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Trong bài này mình sẽ giới thiệu qua về TOCTOU (time of check - time of use), một hướng khai thác trong race condition cũng như cách setup đơn giản để khai thác và giải một số bài minh hoạ.&lt;/p&gt;</description></item></channel></rss>
