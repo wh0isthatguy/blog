@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Authors on wh0isthatguy</title>
-    <link>https://pwnn.me/authors/</link>
+    <link>http://localhost:1313/authors/</link>
     <description>Recent content in Authors on wh0isthatguy</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>ryan@pwnn.me (wh0isthatguy)</managingEditor>
     <webMaster>ryan@pwnn.me (wh0isthatguy)</webMaster>
     <copyright>flag{my_c0pyr1ght}</copyright>
-    <atom:link href="https://pwnn.me/authors/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/authors/index.xml" rel="self" type="application/rss+xml" />
     
   </channel>
 </rss>
