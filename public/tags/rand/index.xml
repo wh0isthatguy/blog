@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rand on wh0isthatguy</title>
+    <link>https://pwnn.me/tags/rand/</link>
+    <description>Recent content in Rand on wh0isthatguy</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>ryan@pwnn.me (wh0isthatguy)</managingEditor>
+    <webMaster>ryan@pwnn.me (wh0isthatguy)</webMaster>
+    <copyright>flag{ThAnk_y0u_f0r_r34dinG_th1s}</copyright>
+    <lastBuildDate>Fri, 12 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://pwnn.me/tags/rand/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>rand() vulnerability</title>
+      <link>https://pwnn.me/blog/randvuln/</link>
+      <pubDate>Fri, 12 May 2023 00:00:00 +0000</pubDate>
+      <author>ryan@pwnn.me (wh0isthatguy)</author>
+      <guid>https://pwnn.me/blog/randvuln/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>

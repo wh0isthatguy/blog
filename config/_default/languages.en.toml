@@ -1,0 +1,27 @@
+disabled = false
+locale = "en"
+label = "English"
+weight = 1
+title = "wh0isthatguy"
+
+[params]
+displayName = "EN"
+isoCode = "en"
+rtl = false
+dateFormat = "2 January 2006"
+copyright = "flag{ThAnk_y0u_f0r_r34dinG_th1s}"
+description = "random blog by random person"
+
+[params.author]
+name = "wh0isthatguy"
+email = "ryan@pwnn.me"
+image = "img.jpg"
+bio = "random blog by random person"
+headline = "random blog by random person"
+
+[[params.author.links]]
+github = "https://github.com/wh0isthatguy"
+[[params.author.links]]
+x-twitter = "https://x.com/im_whoisthatguy"
+[[params.author.links]]
+discord = "https://discord.com/users/411859885521764372"

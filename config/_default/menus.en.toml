@@ -1,0 +1,33 @@
+[[main]]
+none = "none"
+
+[[main]]
+name = "about"
+pre = "mug-hot"
+pageRef = "about"
+identifier = "iHP49wOUkJ"
+weight = 4
+
+[[main]]
+name = "blog"
+pre = "pencil"
+pageRef = "blog"
+identifier = "cU2KR7Oa59"
+weight = 2
+
+[[main]]
+name = "home"
+pre = "microsoft"
+pageRef = "/"
+identifier = "4D5fN3gg5l"
+weight = 1
+
+[[main]]
+name = "tags"
+pre = "email"
+pageRef = "tags"
+identifier = "FOfHguBiJ2"
+weight = 3
+
+[[footer]]
+none = "none"
