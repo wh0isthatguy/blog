@@ -9,7 +9,7 @@ displayName = "EN"
 isoCode = "en"
 rtl = false
 dateFormat = "2 January 2006"
-copyright = "flag{ThAnk_y0u_f0r_r34dinG_th1s}"
+copyright = "flag{my_c0pyr1ght}"
 description = "random blog by random person"
 
 [params.author]
@@ -25,3 +25,5 @@ github = "https://github.com/wh0isthatguy"
 x-twitter = "https://x.com/im_whoisthatguy"
 [[params.author.links]]
 discord = "https://discord.com/users/411859885521764372"
+[[params.author.links]]
+link = "https://hackmd.io/@whoisthatguy"
