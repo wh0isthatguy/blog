@@ -4,6 +4,7 @@ date: 2023-04-28
 draft: false
 tags: ["bruteforce", "pwn"]
 showTableOfContents: true
+description: "Như ở bài trước ta đã biết được stack canary là một cơ chế để ngăn chặn buffer overflow. Đây là một giá trị để trước return address và được check trước khi return 1 stack frame nhằm tránh overflow. Do đó để chuyển hướng hoạt động của chương trình, ta cần tấn công bằng 1 trong 2 cách sau: leak hoặc bruteforce stack canary. Trong bài này sẽ tấn công bằng cách thứ 2."
 ---
 {{< alert >}}
 **Images not loading?** Try accessing this site using a VPN.

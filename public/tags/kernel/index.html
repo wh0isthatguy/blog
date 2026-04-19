@@ -825,6 +825,11 @@
 
     </div>
     
+      <div class="article-link__summary prose dark:prose-invert max-w-fit mt-1 line-clamp-3">
+         Images not loading? Try accessing this site using a VPN. Mitigations # 1. SMEP # dont allow to execute user space code in qemu, to enable SMEP we use -cpu+smep to disasble it use -append nosmep SMEP is a hardware security mechanism. Setting the 21st bit of the CR4 register enables SMEP. 2. SMAP # kernel space cannot read or write userspace memory to do that we need to use copy_from_user / copy_to_user 3. Kernel Canary # the same as stack canary on user land enabled in the kernel at compile time and cannot be disabled. 4. KASLR # randomizes the base address where the kernel is loaded each time the system is booted It can be enabled/disabled by adding kaslr or nokaslr under -append option. 5. KPTI (Kernel Page-Table Isolation) # prevent Meltdown (side-channel attack) 6. KADR (Kernel Address Display Restriction) # hide kernel address /proc/kallsyms /proc/sys/kernel/kptr_restrict : 0 to disable it Kernel have sus function : run_cmd(char * cmd) : run cmd in userspace as root.
+
+      </div>
+    
   </div>
   <div class="px-6 pt-4 pb-2"></div>
 </article>

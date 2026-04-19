@@ -889,6 +889,11 @@
 
     </div>
     
+      <div class="article-link__summary prose dark:prose-invert max-w-fit mt-1 line-clamp-3">
+         Images not loading? Try accessing this site using a VPN. Trong một số trường hợp khi ta overflow mà không có các hàm trong PLT thích hợp để leak libc ra thì ret2dl_resolve là một kỹ thuật để lấy được shell. Trong bài này mình sẽ giới thiệu tóm tắt về cách ret2dl_resolve ở glibc 2.37 hoạt động qua một bài demo.
+
+      </div>
+    
   </div>
   <div class="px-6 pt-4 pb-2"></div>
 </article>
@@ -1022,6 +1027,11 @@
 
 
     </div>
+    
+      <div class="article-link__summary prose dark:prose-invert max-w-fit mt-1 line-clamp-3">
+         Images not loading? Try accessing this site using a VPN. Mitigations # 1. SMEP # dont allow to execute user space code in qemu, to enable SMEP we use -cpu+smep to disasble it use -append nosmep SMEP is a hardware security mechanism. Setting the 21st bit of the CR4 register enables SMEP. 2. SMAP # kernel space cannot read or write userspace memory to do that we need to use copy_from_user / copy_to_user 3. Kernel Canary # the same as stack canary on user land enabled in the kernel at compile time and cannot be disabled. 4. KASLR # randomizes the base address where the kernel is loaded each time the system is booted It can be enabled/disabled by adding kaslr or nokaslr under -append option. 5. KPTI (Kernel Page-Table Isolation) # prevent Meltdown (side-channel attack) 6. KADR (Kernel Address Display Restriction) # hide kernel address /proc/kallsyms /proc/sys/kernel/kptr_restrict : 0 to disable it Kernel have sus function : run_cmd(char * cmd) : run cmd in userspace as root.
+
+      </div>
     
   </div>
   <div class="px-6 pt-4 pb-2"></div>
@@ -1157,6 +1167,11 @@
 
     </div>
     
+      <div class="article-link__summary prose dark:prose-invert max-w-fit mt-1 line-clamp-3">
+         Images not loading? Try accessing this site using a VPN. Analysis # 1. fclose # fclose() → __IO_new_fclose
+
+      </div>
+    
   </div>
   <div class="px-6 pt-4 pb-2"></div>
 </article>
@@ -1291,6 +1306,11 @@
 
     </div>
     
+      <div class="article-link__summary prose dark:prose-invert max-w-fit mt-1 line-clamp-3">
+         Images not loading? Try accessing this site using a VPN. ret2csu là kỹ thuật được sử dụng khi ta không có đầy đủ gadget cần thiết để thực hiện rop chain. Đây chính là gadget luôn có khi compile dynamic một binary. Bài này mình sẽ giới thiệu về kỹ thuật này thông qua một challenge.
+
+      </div>
+    
   </div>
   <div class="px-6 pt-4 pb-2"></div>
 </article>
@@ -1424,6 +1444,11 @@
 
 
     </div>
+    
+      <div class="article-link__summary prose dark:prose-invert max-w-fit mt-1 line-clamp-3">
+         Images not loading? Try accessing this site using a VPN. Trong bài này mình sẽ giới thiệu qua về TOCTOU (time of check - time of use), một hướng khai thác trong race condition cũng như cách setup đơn giản để khai thác và giải một số bài minh hoạ.
+
+      </div>
     
   </div>
   <div class="px-6 pt-4 pb-2"></div>

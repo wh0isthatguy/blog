@@ -17,7 +17,7 @@
       <pubDate>Tue, 22 Aug 2023 00:00:00 +0000</pubDate>
       <author>ryan@pwnn.me (wh0isthatguy)</author>
       <guid>https://pwnn.me/blog/ret2csu/</guid>
-      <description></description>
+      <description>&lt;div&#xA;  &#xA;    class=&#34;flex px-4 py-3 rounded-md shadow bg-primary-100 dark:bg-primary-900&#34;&#xA;  &#xA;  &gt;&#xA;  &lt;span&#xA;    &#xA;      class=&#34;text-primary-400 pe-3 flex items-center&#34;&#xA;    &#xA;    &gt;&#xA;    &lt;span class=&#34;relative block icon&#34;&gt;&lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 512 512&#34;&gt;&lt;path fill=&#34;currentColor&#34; d=&#34;M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z&#34;/&gt;&lt;/svg&gt;&#xA;&lt;/span&gt;&#xA;  &lt;/span&gt;&#xA;&#xA;  &lt;span&#xA;    &#xA;      class=&#34;dark:text-neutral-300&#34;&#xA;    &#xA;    &gt;&lt;strong&gt;Images not loading?&lt;/strong&gt; Try accessing this site using a VPN.&lt;/span&gt;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;p&gt;ret2csu là kỹ thuật được sử dụng khi ta không có đầy đủ gadget cần thiết để thực hiện rop chain. Đây chính là gadget luôn có khi compile dynamic một binary. Bài này mình sẽ giới thiệu về kỹ thuật này thông qua một challenge.&lt;/p&gt;</description>
       
     </item>
     
