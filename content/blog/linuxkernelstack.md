@@ -1,6 +1,6 @@
 ---
 title: "Stack-based exploits in Linux kernel"
-date: 2023-05-12
+date: 2024-01-29
 draft: false
 tags: ["kernel", "pwn"]
 showTableOfContents: true
