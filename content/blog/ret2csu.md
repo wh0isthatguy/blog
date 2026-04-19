@@ -5,6 +5,10 @@ draft: false
 tags: ["overflow", "pwn","ret2csu"]
 showTableOfContents: true
 ---
+{{< alert >}}
+**Images not loading?** Try accessing this site using a VPN.
+{{< /alert >}}
+
 ret2csu là kỹ thuật được sử dụng khi ta không có đầy đủ gadget cần thiết để thực hiện rop chain. Đây chính là gadget luôn có khi compile dynamic một binary. Bài này mình sẽ giới thiệu về kỹ thuật này thông qua một challenge.
 
 ## Tổng quát

@@ -5,6 +5,10 @@ draft: false
 tags: ["rand", "pwn"]
 showTableOfContents: true
 ---
+{{< alert >}}
+**Images not loading?** Try accessing this site using a VPN.
+{{< /alert >}}
+
 ## Vấn đề
 Giả sử ta có đoạn code sau đây được compile bằng `gcc -o rand rand.c`
 

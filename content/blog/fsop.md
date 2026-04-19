@@ -5,6 +5,10 @@ draft: false
 tags: ["fsop", "pwn"]
 showTableOfContents: true
 ---
+{{< alert >}}
+**Images not loading?** Try accessing this site using a VPN.
+{{< /alert >}}
+
 ## Analysis
 
 ### 1. fclose

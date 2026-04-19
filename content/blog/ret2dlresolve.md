@@ -5,6 +5,10 @@ draft: false
 tags: ["overflow", "pwn"]
 showTableOfContents: true
 ---
+{{< alert >}}
+**Images not loading?** Try accessing this site using a VPN.
+{{< /alert >}}
+
 Trong một số trường hợp khi ta overflow mà không có các hàm trong PLT thích hợp để leak libc ra thì ret2dl_resolve là một kỹ thuật để lấy được shell. Trong bài này mình sẽ giới thiệu tóm tắt về cách ret2dl_resolve ở glibc 2.37 hoạt động qua một bài demo.
 
 ## I. Prerequisites :

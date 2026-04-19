@@ -5,6 +5,10 @@ draft: false
 tags: ["toctou", "pwn"]
 showTableOfContents: true
 ---
+{{< alert >}}
+**Images not loading?** Try accessing this site using a VPN.
+{{< /alert >}}
+
 Trong bài này mình sẽ giới thiệu qua về TOCTOU (time of check - time of use), một hướng khai thác trong race condition cũng như cách setup đơn giản để khai thác và giải một số bài minh hoạ. 
 
 ## Giới thiệu

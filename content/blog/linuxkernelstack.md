@@ -5,6 +5,10 @@ draft: false
 tags: ["kernel", "pwn"]
 showTableOfContents: true
 ---
+{{< alert >}}
+**Images not loading?** Try accessing this site using a VPN.
+{{< /alert >}}
+
 ## Mitigations
 ### 1. SMEP
 - dont allow to execute user space code
