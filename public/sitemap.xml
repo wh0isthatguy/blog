@@ -3,61 +3,79 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>http://localhost:1313/blog/</loc>
+    <loc>https://pwnn.me/blog/</loc>
+    <lastmod>2026-05-18T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pwnn.me/blog/cve-2026-32070/</loc>
+    <lastmod>2026-05-18T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pwnn.me/</loc>
+    <lastmod>2026-05-18T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pwnn.me/blog/vboxp2o2023/</loc>
+    <lastmod>2026-05-14T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pwnn.me/blog/cve-2025-29824/</loc>
+    <lastmod>2026-04-13T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://pwnn.me/blog/ret2dlresolve/</loc>
     <lastmod>2024-01-29T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/blog/ret2dlresolve/</loc>
+    <loc>https://pwnn.me/blog/linuxkernelstack/</loc>
     <lastmod>2024-01-29T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/blog/linuxkernelstack/</loc>
-    <lastmod>2024-01-29T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2024-01-29T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/blog/fsop/</loc>
+    <loc>https://pwnn.me/blog/fsop/</loc>
     <lastmod>2023-10-13T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/blog/ret2csu/</loc>
+    <loc>https://pwnn.me/blog/ret2csu/</loc>
     <lastmod>2023-08-22T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/blog/toctou/</loc>
+    <loc>https://pwnn.me/blog/toctou/</loc>
     <lastmod>2023-07-04T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/blog/randvuln/</loc>
+    <loc>https://pwnn.me/blog/randvuln/</loc>
     <lastmod>2023-05-12T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/blog/brutecanary/</loc>
+    <loc>https://pwnn.me/blog/brutecanary/</loc>
     <lastmod>2023-04-28T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://pwnn.me/about/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>

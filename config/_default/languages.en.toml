@@ -10,14 +10,14 @@ isoCode = "en"
 rtl = false
 dateFormat = "2 January 2006"
 copyright = "flag{my_c0pyr1ght}"
-description = "random blog by random person"
+description = "big brother is watching you"
 
 [params.author]
 name = "wh0isthatguy"
 email = "ryan@pwnn.me"
 image = "img.jpg"
-bio = "random blog by random person"
-headline = "random blog by random person"
+bio = "big brother is watching you"
+headline = "big brother is watching you"
 
 [[params.author.links]]
 github = "https://github.com/wh0isthatguy"
