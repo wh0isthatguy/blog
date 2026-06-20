@@ -1,4 +1,162 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on wh0isthatguy</title><link>https://pwnn.me/blog/</link><description>Recent content in Blog on wh0isthatguy</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ryan@pwnn.me (wh0isthatguy)</managingEditor><webMaster>ryan@pwnn.me (wh0isthatguy)</webMaster><copyright>flag{my_c0pyr1ght}</copyright><lastBuildDate>Mon, 29 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://pwnn.me/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>ret2dl_resolve note</title><link>https://pwnn.me/blog/ret2dlresolve/</link><pubDate>Mon, 29 Jan 2024 00:00:00 +0000</pubDate><author>ryan@pwnn.me (wh0isthatguy)</author><guid>https://pwnn.me/blog/ret2dlresolve/</guid><description>&lt;div
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on wh0isthatguy</title><link>https://pwnn.me/blog/</link><description>Recent content in Blog on wh0isthatguy</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ryan@pwnn.me (wh0isthatguy)</managingEditor><webMaster>ryan@pwnn.me (wh0isthatguy)</webMaster><copyright>flag{my_c0pyr1ght}</copyright><lastBuildDate>Mon, 18 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://pwnn.me/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>CVE-2026-32070 1day analysis</title><link>https://pwnn.me/blog/cve-2026-32070/</link><pubDate>Mon, 18 May 2026 00:00:00 +0000</pubDate><author>ryan@pwnn.me (wh0isthatguy)</author><guid>https://pwnn.me/blog/cve-2026-32070/</guid><description>&lt;div
+ 
+ class="flex px-4 py-3 rounded-md shadow bg-primary-100 dark:bg-primary-900"
+ 
+ &gt;
+ &lt;span
+ 
+ class="text-primary-400 pe-3 flex items-center"
+ 
+ &gt;
+ &lt;span class="relative block icon"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"&gt;&lt;path fill="currentColor" d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/&gt;&lt;/svg&gt;
+&lt;/span&gt;
+ &lt;/span&gt;
+
+ &lt;span
+ 
+ class="dark:text-neutral-300"
+ 
+ &gt;&lt;strong&gt;Images not loading?&lt;/strong&gt; Try accessing this site using a VPN.&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;figure&gt;&lt;img
+ class="my-0 rounded-md"
+ loading="lazy"
+ decoding="async"
+ fetchpriority="low"
+ alt="image"
+ src="https://hackmd.io/_uploads/HyCUko-yGl.png"
+ &gt;&lt;/figure&gt;
+
+&lt;h2 class="relative group"&gt;Overview
+ &lt;div id="overview" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#overview" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;Sau khi mình phân tích xong CVE-2025-29824, thì sau đó vài ngày là patch tuesday của Microsoft và mình vô tình thấy bài đăng này
+&lt;figure&gt;&lt;img
+ class="my-0 rounded-md"
+ loading="lazy"
+ decoding="async"
+ fetchpriority="low"
+ alt="image"
+ src="https://hackmd.io/_uploads/rk0XlUgyMl.png"
+ &gt;&lt;/figure&gt;
+
+CLFS lại lần nữa có vuln LPE nên mình sẽ phân tích nó nữa vậy.
+Đây lại là vuln UAF, các thông tin cơ bản về CLFS có thể xem ở bài phân tích &lt;a href="https://hackmd.io/jTWj3kNbQxmZW4GCUqK-hA" target="_blank" rel="noreferrer"&gt;cũ&lt;/a&gt; của mình
+&lt;figure&gt;&lt;img
+ class="my-0 rounded-md"
+ loading="lazy"
+ decoding="async"
+ fetchpriority="low"
+ alt="image"
+ src="https://hackmd.io/_uploads/ByT5gLlJze.png"
+ &gt;&lt;/figure&gt;
+
+Nó có ảnh hưởng đến các version sau, chi tiết hơn có thể xem ở &lt;a href="https://nvd.nist.gov/vuln/detail/CVE-2026-32070" target="_blank" rel="noreferrer"&gt;đây&lt;/a&gt;
+&lt;figure&gt;&lt;img
+ class="my-0 rounded-md"
+ loading="lazy"
+ decoding="async"
+ fetchpriority="low"
+ alt="image"
+ src="https://hackmd.io/_uploads/HkLRgUxkzg.png"
+ &gt;&lt;/figure&gt;
+&lt;/p&gt;</description></item><item><title>Journey into VM Escapse with pwn2own 2023 (CVE-2023-21987 and CVE-2023-21991)</title><link>https://pwnn.me/blog/vboxp2o2023/</link><pubDate>Thu, 14 May 2026 00:00:00 +0000</pubDate><author>ryan@pwnn.me (wh0isthatguy)</author><guid>https://pwnn.me/blog/vboxp2o2023/</guid><description>&lt;div
+ 
+ class="flex px-4 py-3 rounded-md shadow bg-primary-100 dark:bg-primary-900"
+ 
+ &gt;
+ &lt;span
+ 
+ class="text-primary-400 pe-3 flex items-center"
+ 
+ &gt;
+ &lt;span class="relative block icon"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"&gt;&lt;path fill="currentColor" d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/&gt;&lt;/svg&gt;
+&lt;/span&gt;
+ &lt;/span&gt;
+
+ &lt;span
+ 
+ class="dark:text-neutral-300"
+ 
+ &gt;&lt;strong&gt;Images not loading?&lt;/strong&gt; Try accessing this site using a VPN.&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;figure&gt;&lt;img
+ class="my-0 rounded-md"
+ loading="lazy"
+ decoding="async"
+ fetchpriority="low"
+ alt=""
+ src="https://files.catbox.moe/f396i1.gif"
+ &gt;&lt;/figure&gt;
+
+&lt;h2 class="relative group"&gt;I. Overview
+ &lt;div id="i-overview" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#i-overview" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;Bug mình chọn ở đây là 2 CVE-2023-21987 và CVE-2023-21991, đây là vuln liên quan đến VirtualBox được sử dụng ở pwn2own 2023. Đây sẽ là vuln liên quan đến vm escapse thực tế đầu tiên mình làm dù trước đây mình cũng có giải chall ctf liên quan đến vm escapse. Do đó mình sẽ tìm hiểu tí về hypervisor cũng như cơ bản về architecture của VirtualBox. 2 CVE này là n day đã có blog phân tích tuy nhiên poc public mình thấy còn thiếu cũng như không hoàn chỉnh nên sẽ viết lại từ đầu.&lt;/p&gt;</description></item><item><title>Racing in kernel pool with CVE-2025-29824</title><link>https://pwnn.me/blog/cve-2025-29824/</link><pubDate>Mon, 13 Apr 2026 00:00:00 +0000</pubDate><author>ryan@pwnn.me (wh0isthatguy)</author><guid>https://pwnn.me/blog/cve-2025-29824/</guid><description>&lt;div
+ 
+ class="flex px-4 py-3 rounded-md shadow bg-primary-100 dark:bg-primary-900"
+ 
+ &gt;
+ &lt;span
+ 
+ class="text-primary-400 pe-3 flex items-center"
+ 
+ &gt;
+ &lt;span class="relative block icon"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"&gt;&lt;path fill="currentColor" d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/&gt;&lt;/svg&gt;
+&lt;/span&gt;
+ &lt;/span&gt;
+
+ &lt;span
+ 
+ class="dark:text-neutral-300"
+ 
+ &gt;&lt;strong&gt;Images not loading?&lt;/strong&gt; Try accessing this site using a VPN.&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;figure&gt;&lt;img
+ class="my-0 rounded-md"
+ loading="lazy"
+ decoding="async"
+ fetchpriority="low"
+ alt="cve"
+ src="https://hackmd.io/_uploads/rJa8gQ9hWe.gif"
+ &gt;&lt;/figure&gt;
+
+&lt;h2 class="relative group"&gt;I. Overview
+ &lt;div id="i-overview" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#i-overview" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;Trước đây mình từng đọc các bài blog phân tích tactic của các nhóm APT thì mình thấy có CLFS (Common Log File System) thường được sử dụng như 0day để leo quyền thành system từ đó load rootkit. Do mình thấy tỉ lệ CLFS xảy ra nhiều vuln như vậy nên mình sẽ phân tích nó.
+Vậy đầu tiên ta cần hiểu CLFS là gì. Dựa vào các docs từ &lt;a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/kernel/introduction-to-the-common-log-file-system" target="_blank" rel="noreferrer"&gt;microsoft&lt;/a&gt; hoặc các bài &lt;a href="https://forensics.wiki/common_log_file_system_%28clfs%29/" target="_blank" rel="noreferrer"&gt;blog&lt;/a&gt; ta đại khái có thể hình dung ra nó liên quan đến cơ chế lưu giữ log trên windows và cho phép user có thể revert lại khi cần.
+&lt;figure&gt;&lt;img
+ class="my-0 rounded-md"
+ loading="lazy"
+ decoding="async"
+ fetchpriority="low"
+ alt="image"
+ src="https://hackmd.io/_uploads/SydJTTthbe.png"
+ &gt;&lt;/figure&gt;
+
+Từ đây mình thấy có các attack vector liên quan đến các yếu tố đọc ghi log, parse data trong log, handle các log operation như nào. Các yếu tố này sẽ được sử dụng để dễ dàng hơn trong việc diff check cũng như exploit&lt;/p&gt;</description></item><item><title>ret2dl_resolve note</title><link>https://pwnn.me/blog/ret2dlresolve/</link><pubDate>Mon, 29 Jan 2024 00:00:00 +0000</pubDate><author>ryan@pwnn.me (wh0isthatguy)</author><guid>https://pwnn.me/blog/ret2dlresolve/</guid><description>&lt;div
  
  class="flex px-4 py-3 rounded-md shadow bg-primary-100 dark:bg-primary-900"
  
